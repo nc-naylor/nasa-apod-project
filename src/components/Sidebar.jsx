@@ -1,5 +1,26 @@
 import React from 'react';
 
-export default function Sidebar() {
-  return <div>Sidebar</div>;
+export default function Sidebar(props) {
+  const { handleToggleModal } = props;
+
+  return (
+    <div className='sidebar'>
+      <div onClick={handleToggleModal} className='bgOverlay'></div>
+      <div className='sidebarContents'>
+        <h2>The Beautiful Carina Nebula</h2>
+        <div>
+          <p>Description</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+            nostrum cupiditate sunt quis magni nesciunt assumenda est sequi!
+            Perferendis itaque tempora cupiditate optio labore ratione porro
+            laborum assumenda, illo aut.
+          </p>
+        </div>
+        <button onClick={handleToggleModal}>
+          <i className='fa-solid fa-circle-chevron-right'></i>
+        </button>
+      </div>
+    </div>
+  );
 }
