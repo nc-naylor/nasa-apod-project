@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Main />
-      {showModal && <Sidebar handleToggleModal={handleToggleModal} />}
+      {<Sidebar isOpen={showModal} handleToggleModal={handleToggleModal} />}
       <Footer handleToggleModal={handleToggleModal} />
     </>
   );
