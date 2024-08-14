@@ -60,7 +60,7 @@ footer div {
 }
 
 footer h2 {
-  font-size: 1.5 rem;
+  font-size: 2rem;
 }
 
 footer h1 {
@@ -131,9 +131,26 @@ footer i:hover {
   max-width: 800px;
   margin-left: auto;
   gap: 1rem;
-  padding: 2rem;
+  padding: 2.5rem;
   overflow-y: scroll;
   z-index: 2;
+}
+
+.sidebarContents h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.date {
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+
+.description {
+  font-size: 1.6rem;
+  font-weight: 200;
 }
 
 .sidebarContents div {
@@ -149,16 +166,51 @@ footer i:hover {
   cursor: pointer;
 }
 
-.sidebarContents i {
+.sidebarContents .closeBtn {
   color: white;
   font-size: 3em;
   border-radius: 50%;
   transition: all 500ms ease;
 }
 
-.sidebarContents i:hover {
+.sidebarContents .closeBtn:hover {
   opacity: 0.8;
   box-shadow: 0 0 20px 4px #9499f1;
+}
+
+.sidebarContents .copyright {
+  font-weight: 200;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.sidebarContents .copyright p {
+  padding-left: 0.5rem;
+}
+
+.loadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.loadingState i {
+  opacity: 0.2;
+  font-size: 4rem;
+  animation: spin 1.25s linear infinite;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (min-width: 640px) {
