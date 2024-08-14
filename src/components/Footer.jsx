@@ -1,8 +1,6 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Footer(props) {
-  const { handleToggleModal, data } = props;
-
+export function Footer({ handleToggleModal, data }) {
   return (
     <footer>
       <div className='bgGradient'></div>
@@ -16,3 +14,12 @@ export default function Footer(props) {
     </footer>
   );
 }
+
+Footer.propTypes = {
+  handleToggleModal: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export default Footer;

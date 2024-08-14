@@ -1,8 +1,6 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Main(props) {
-  const { data } = props;
-
+export function Main({ data }) {
   return (
     <div className='imageContainer'>
       <img
@@ -13,3 +11,12 @@ export default function Main(props) {
     </div>
   );
 }
+
+Main.propTypes = {
+  data: PropTypes.shape({
+    hdurl: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
+export default Main;

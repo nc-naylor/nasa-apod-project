@@ -1,8 +1,6 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Sidebar(props) {
-  const { isOpen, handleToggleModal, data } = props;
-
+export function Sidebar({ isOpen, handleToggleModal, data }) {
   function formatDate(dateString) {
     if (!dateString) return '';
     const [year, month, day] = dateString.split('-');
@@ -32,3 +30,16 @@ export default function Sidebar(props) {
     </>
   );
 }
+
+Sidebar.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  handleToggleModal: PropTypes.func.isRequired,
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    date: PropTypes.string,
+    explanation: PropTypes.string,
+    copyright: PropTypes.string,
+  }).isRequired,
+};
+
+export default Sidebar;
